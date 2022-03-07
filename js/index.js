@@ -11,10 +11,11 @@ window.onscroll = function(){
         mynav.style.backgroundColor = '#810000';
         visimg.style.display='none';
         vis.style.display='block';
-
-    }
-    else{
+        
+      }
+      else{
         mynav.style.backgroundColor = '#000';
+        visimg.style.animation='rotate 1s linear';
         vis.style.display='none';
         visimg.style.display='block';
         
