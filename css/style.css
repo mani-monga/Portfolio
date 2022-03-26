@@ -68,9 +68,7 @@
       flex-direction: row; 
       justify-content: flex-end;
       height: fit-content;
-      opacity: 1;
-      z-index:  ;
-      
+      opacity: 1; 
   }
   .navbar ul li {
     list-style: none ;
