@@ -4,12 +4,10 @@
   }
    body {
     min-width: 100%;
-    height: 100vh;
-    background-image: url(../gif2.gif);
-    background-blend-mode: darken;
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;  
+    min-height: 100vh;
+    background-image: url(/slanted-gradient.svg);
+    background-repeat: no-repeat;
+    background-size: cover; 
   } 
 
 
@@ -17,24 +15,24 @@
 
 .header{
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #000;
-    /* border-top: 1px solid white; */
-    border-bottom: 1px solid white;
+    border: 1px solid white;
     position: sticky;
-    width: 100%;
-    /* top: 10px; */
-    z-index: 2;
-    
+    width: 90%;
+    margin: auto;
+    top: 10px;
+    z-index: 2; 
 }
-
-  .header h2{
-         display: none;
+.logo h2,.imgtxt{
         font-family: 'The Nautigal', cursive;
         font-weight: 600;
         font-size: 2.5em;
         color: white;
-        transition: 1s ease-in-out;
-      }
+        padding-top: 5px;
+}
+  
       .logo{
         flex-basis: 30%;
         padding: 5px;
@@ -58,14 +56,21 @@
         
       }
 
+.menubtn{
+  display: none;
+}
+
   .navbar {
     flex-basis: 70%;
-    
 }
 .navbar ul{
       display: flex;
       flex-direction: row; 
       justify-content: flex-end;
+      height: fit-content;
+      opacity: 1;
+      z-index:  ;
+      
   }
   .navbar ul li {
     list-style: none ;
@@ -104,7 +109,7 @@ a{
 
   .social {
     position: fixed;
-    top: 150px;
+    top: 120px;
   }
   .social ul {
     padding: 0px;
@@ -194,51 +199,46 @@ a{
     transform: rotate(0deg);
   }
 
+.profile{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90vh;
+}
 
-
-  .image img{
-      width: 30%;
-      position: absolute;
-      bottom: 70px;
-      right: 50px;
-      background: url(../arrangement-gfefe220c8_1920.jpg);
-      background-position: center;
-      border: 2px solid rgb(255, 255, 255);
-      border-radius: 50%;
-      
-  }
   .intro{
-      position: absolute;
-      bottom: 150px;
-      left: 200px;
+      /* border: 2px solid white; */
       color: black;
       width: 50%;
   }
   .intro h1{
       display: inline;
+      margin: 10px;
       font-size: 4em;
       background-color: white;
-      
     }
     .intro h2{
         display: inline;
         background-color: white;
         font-size: 3em;
+        margin: 10px;
         
     }
-    .intro span{
-        
-        background-color: #0e013d;
+    .intro p{
+        margin: 10px;
+        background-color: #ff0000;
         color: rgb(255, 255, 255);
         font-size: 1em;
         padding: 3px 0;
         font-family: 'Merriweather', serif;    
   }
- 
+.btnbdy{
+    margin: 15px;
+}
 
 button {
   padding: 0.8em 1.8em;
-  box-shadow: 0 0 0 5px #97aaff,
+  box-shadow: 0 0 0 3px #ff0000,
                 inset 0 0 0 1px #fff;
   margin-top: 23px;
   cursor: pointer;
@@ -253,6 +253,8 @@ button {
   font-family: inherit;
   font-weight: bold;
   color: #000000;
+  border-style: none;
+
  }
  
  button::before {
@@ -263,17 +265,133 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
-  background: #0a0046;
+  background: #eb2e2e;
   transition: .5s ease;
   display: block;
   z-index: -1;
  }
  
  button:hover::before {
-  width: 105%;
+  width: 100%;
  }
  
  button:hover {
   color: rgb(255, 251, 251);
  }
+ 
+ .image{
+   border: 2px solid white;
+}
+.image img{
+      padding: 30px;
+      padding-bottom: 0;
+      width: 300px;
+      background: url(/subtle-prism.svg);
+  }
+  .imgtxt{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    color: #000;
+  }
+
+
+@media only screen and (max-width: 1000px) {
+
+    body{
+      background-color: #a00;
+    }
+    
+    .profile{
+      position: absolute;
+      width: 100%;
+      top: 30%;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+    .intro{
+      margin-top: 10px;
+      width: 80%;
+      text-align: center;
+  }
+  .intro h1{
+      font-size: 2em;
+    }
+    .intro h2{
+        font-size: 1.5em;    
+    }
+    .intro p{
+        margin: 10px;
+        background-color: #ff0000;
+        color: rgb(255, 255, 255);
+        font-size: 1em;
+        padding: 3px 0;
+        font-family: 'Merriweather', serif;    
+  }
+.btnbdy{
+    margin: 15px;
+}
+    .social{
+      display: none;
+    }
+    .logo{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .logo svg{
+      color: white;
+      font-size: 2em;
+      margin: 5px;
+    }
+    .header{
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+    }
+    .navbar ul{
+      display: flex;
+      flex-direction: column; 
+      height: 0;
+      opacity: 0;
+      transition: height 1s;
+      }
+    .navbar ul li{
+      text-align: left;
+    }  
+
+    .menubtn{
+      all: unset;
+      width: 40px;
+      margin-right: 10px;
+    }
+    .menubtn:hover{
+      cursor: pointer;
+    }
+    .menubtn::before{
+      all: unset;
+    }
+    .menubtn::before,
+    .menubtn::after,
+    .menubtn div{
+      background: #fff;
+      content: "";
+      display: block;
+      height: 6px;
+      border-radius: 3px;
+      margin: 7px 0;
+      transition: 0.5s;
+    }
+    .menubtn:hover:before {
+      transform: translateY(12px) rotate(135deg);
+    }
+    .menubtn:hover:after {
+      transform: translateY(-12px) rotate(-135deg);
+    }
+    .menubtn:hover div {
+      transform: scale(0);
+    }
+    
+  }
  

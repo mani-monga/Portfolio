@@ -1,18 +1,22 @@
 body{
     all: unset;
+    margin: 0;
+    padding: 0;
 }
 
 
 .header{
-    top: 0;
+    top: 0 ;
+    margin:auto;
+    transition:background-color 1s;
+    width: 100%;
     border: none;
-    transition: 1s;
 }
 
 .first{
     width: 100%;
     height: 100vh;
-    background-image: url(../bg-projects.svg);
+    background-image: url(/bg-projects.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -38,6 +42,13 @@ h1{
     font-size: 4em;
     font-weight: bold;
 }
+.header h2{
+   font-family: 'The Nautigal', cursive;
+   font-weight: 600;
+   font-size: 2.5em;
+   color: white;
+   transition: 1s ease-in-out;
+ }
 .heading p{
     font-size: 2em;
     padding: 23px 0;
@@ -46,8 +57,10 @@ h1{
 
 
 .project{
-    max-width: 100%;
+    position: relative;
+    min-height: 100vh;
     background-color: #630000;
+    
 }
 
 .card{
@@ -134,29 +147,33 @@ h1{
     padding: 50px;
     justify-content:space-between;
 }
+.Containerslist{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+}
 .Containers{
-    flex-basis: 20%;
-    display: block;
-    padding: 50px;
-    width: 200px;
-    height: 200px;
+    flex-basis: 30%;
+    display: flex;
+    padding: 20px;
+    width: 20px;
+    height: 30px;
     margin: auto;
     margin-top: 20px;
     text-align: center;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
 }
 .Containers i{
-    font-size: 150px;
+    font-size: 2em;
 }
 .Containers span{
-    display: block;
-    font-size: 40px;
+    font-size: 1.2em;
+    padding: 0 10px;
 }
 .Containers img{
-    width: 100px;
-    height: 100px;
+    width: 30px;
+    height: 30px;
 }
 .head{
     font-size: 4em;
@@ -206,4 +223,31 @@ h1{
     border: 1px solid white;
     padding: 20px 8px;
     box-sizing: border-box ;
+}
+
+@media only screen and (max-width: 1000px){
+    .heading{
+        width: 80%;
+    }
+    .heading p{
+        font-size: 1.5em;
+    }
+    .card{
+        flex-direction: column;
+        width: 100%;
+    }
+    .webimage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .webimage img{
+        width: 80%;
+    }
+    .project{
+        text-align: center;
+    }
+    .footer{
+        flex-direction: column;
+    }
 }
