@@ -5,7 +5,7 @@
    body {
     min-width: 100%;
     min-height: 100vh;
-    background-image: url(/slanted-gradient.svg);
+    background-image: url(./slanted-gradient.svg);
     background-repeat: no-repeat;
     background-size: cover; 
   } 
@@ -286,7 +286,7 @@ button {
       padding: 30px;
       padding-bottom: 0;
       width: 300px;
-      background: url(/subtle-prism.svg);
+      background: url(./subtle-prism.svg);
   }
   .imgtxt{
     background-color: white;
