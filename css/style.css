@@ -5,7 +5,7 @@
    body {
     min-width: 100%;
     min-height: 100vh;
-    background-image: url(./slanted-gradient.svg);
+    background-image: url(../slanted-gradient.svg);
     background-repeat: no-repeat;
     background-size: cover; 
   } 
@@ -224,20 +224,18 @@ a{
     }
     .intro p{
         margin: 10px;
-        background-color: #ff0000;
+        background-color: #000000;
         color: rgb(255, 255, 255);
         font-size: 1em;
-        padding: 3px 0;
+        padding: 8px 10px;
         font-family: 'Merriweather', serif;    
   }
 .btnbdy{
     margin: 15px;
 }
 
-button {
+#button {
   padding: 0.8em 1.8em;
-  box-shadow: 0 0 0 3px #ff0000,
-                inset 0 0 0 1px #fff;
   margin-top: 23px;
   cursor: pointer;
   position: relative;
@@ -255,7 +253,7 @@ button {
 
  }
  
- button::before {
+ #button::before {
   content: '';
   width: 0;
   height: 300%;
@@ -263,17 +261,17 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
-  background: #eb2e2e;
+  background: #f70000;
   transition: .5s ease;
   display: block;
   z-index: -1;
  }
  
- button:hover::before {
+ #button:hover::before {
   width: 100%;
  }
  
- button:hover {
+ #button:hover {
   color: rgb(255, 251, 251);
  }
  
@@ -284,7 +282,7 @@ button {
       padding: 30px;
       padding-bottom: 0;
       width: 300px;
-      background: url(./subtle-prism.svg);
+      background: url(../subtle-prism.svg);
   }
   .imgtxt{
     background-color: white;
@@ -292,6 +290,80 @@ button {
     text-align: center;
     color: #000;
   }
+
+  #download{
+    position: fixed;
+    bottom: 20px;
+    right: 43%;
+    width: 200px;
+    overflow: hidden;
+    background:#000;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    transition: 1s;
+    color: white;
+    border-radius: 10px;
+    
+  }
+  #download span{
+    display: block;
+    margin-left: 0.5em;
+    transition: all 0.3s ease-in-out;
+  }
+  #download img{
+    transition: all 0.3s ease-in-out;
+    filter: invert(100%);
+  }
+  /* #download::before{
+    content: '';
+    display: inline-flex;
+    background-image: url('../downlaod.gif');
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+  } */
+
+  /* #download::before{
+    content: url("/downlaod.gif");
+    display: block;
+    zoom: 25%;
+  }
+   */
+   #download:hover{
+     cursor: pointer;
+    }
+    #download:active{      
+      transform: scale(1.1);
+    }
+   #download:hover img {
+    transform: translateX(70px)  scale(1.1);
+   }
+   
+  #download:hover span{
+    transform: translate(10em);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media only screen and (max-width: 1000px) {
@@ -320,10 +392,10 @@ button {
     }
     .intro p{
         margin: 10px;
-        background-color: #ff0000;
+        background-color: #0a0707;
         color: rgb(255, 255, 255);
         font-size: 1em;
-        padding: 3px 0;
+        padding: 8px 10px;
         font-family: 'Merriweather', serif;    
   }
 .btnbdy{
@@ -381,15 +453,36 @@ button {
       margin: 7px 0;
       transition: 0.5s;
     }
-    .menubtn:hover:before {
+    .menubtn:active:before {
       transform: translateY(12px) rotate(135deg);
     }
-    .menubtn:hover:after {
+    .menubtn:active:after {
       transform: translateY(-12px) rotate(-135deg);
     }
-    .menubtn:hover div {
+    .menubtn:active div {
       transform: scale(0);
     }
     
+    #download{
+      right: 5%;
+      width: 20px;
+      height: 60px;
+    }
+    #download span{
+      display: none;
+      transition-delay: 1s;
+    }
+    #download:hover span{
+      display: block;
+      transform: none;
+    }
+    
+    #download:hover {
+      width: 200px;
+    }
+    #download:hover img{
+      transform: none;
+    }
+
   }
- 
+
